@@ -8,7 +8,6 @@ parser.add_argument('-p', '--path', type=str)
 args = parser.parse_args()
 
 for root, dirs, files in os.walk(os.path.normpath(args.path)):
-    path = root.split(os.sep)
     for file in  files:
         if '.pdf' in file:
             try:
